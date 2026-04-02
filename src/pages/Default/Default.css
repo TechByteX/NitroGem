@@ -1,0 +1,488 @@
+/* ===== Dashboard Page ===== */
+.dashboardPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Hero Section ===== */
+.heroSection {
+  width: 100%;
+  padding: 30px 0 40px 0;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.heroTextArea {
+  flex: 1;
+  min-width: 0;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(67, 181, 230, 0.1);
+  border: 1px solid rgba(67, 181, 230, 0.25);
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 24px;
+}
+
+.heroBadgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #43b5e6;
+  box-shadow: 0 0 8px #43b5e6;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px #43b5e6; }
+  50% { opacity: 0.5; box-shadow: 0 0 16px #43b5e6; }
+}
+
+.heroBadge span:last-child {
+  color: #43b5e6;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.heroTitle {
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+}
+
+.heroTitleGradient {
+  background: linear-gradient(to right, #f610fe, #43b5e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroDescription {
+  color: #a8a8b3;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 32px 0;
+  max-width: 460px;
+}
+
+.heroBtnRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.heroBtnPrimaryWrap {
+  background-image: linear-gradient(to right, #f610fe, #43b5e6);
+  border-radius: 25px;
+  padding: 2px;
+}
+
+.heroBtnPrimary {
+  background-color: #111a2e;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heroBtnPrimary:hover {
+  background-image: linear-gradient(to right, #f610fe, #43b5e6);
+}
+
+.heroBtnSecondary {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heroBtnSecondary:hover {
+  border-color: #43b5e6;
+  color: #43b5e6;
+}
+
+/* Hero Visual - Floating Cards */
+.heroVisual {
+  flex: 0 0 340px;
+  position: relative;
+  height: 320px;
+}
+
+.heroCardStack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heroFloatingCard {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  border-radius: 18px;
+  background: rgba(41, 8, 37, 0.85);
+  border: 1px solid rgba(220, 27, 217, 0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  min-width: 220px;
+  animation: floatCard 6s ease-in-out infinite;
+}
+
+.heroFloatingCard img {
+  width: 42px;
+  height: 42px;
+}
+
+.heroCardLabel {
+  display: block;
+  color: #a8a8b3;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.heroCardValue {
+  display: block;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.heroCard1 {
+  top: 10px;
+  right: 0;
+  border-color: rgba(67, 181, 230, 0.4);
+  animation-delay: 0s;
+}
+
+.heroCard2 {
+  top: 115px;
+  right: 60px;
+  border-color: rgba(246, 16, 254, 0.35);
+  animation-delay: -2s;
+}
+
+.heroCard3 {
+  top: 220px;
+  right: 15px;
+  border-color: rgba(62, 186, 223, 0.3);
+  animation-delay: -4s;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===== Quick Stats Bar ===== */
+.quickStatsSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 24px 30px;
+  background: rgba(41, 8, 37, 0.6);
+  border: 1px solid rgba(220, 27, 217, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.quickStatItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.quickStatIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.quickStatIcon img {
+  width: 24px;
+  height: 24px;
+}
+
+.quickStatIcon.rocketIcon img {
+  width: 28px;
+  height: 28px;
+}
+
+.quickStatIconText {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #43b5e6;
+  font-size: 20px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.quickStatText {
+  display: flex;
+  flex-direction: column;
+}
+
+.quickStatLabel {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.quickStatVal {
+  color: #a8a8b3;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.quickStatDivider {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, rgba(206, 60, 167, 0.4), transparent);
+}
+
+/* ===== How It Works Section ===== */
+.howItWorksSection {
+  padding: 30px 0;
+}
+
+.sectionTitle {
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0 0 40px 0;
+}
+
+.stepsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.stepCardWrap {
+  flex: 1;
+  max-width: 300px;
+  background-image: linear-gradient(135deg, rgba(220, 27, 217, 0.4), rgba(78, 180, 195, 0.4));
+  padding: 2px;
+  border-radius: 24px;
+}
+
+.stepCard {
+  background-color: #111a2e;
+  border-radius: 24px;
+  padding: 32px 24px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.stepNumber {
+  font-size: 40px;
+  font-weight: 800;
+  background: linear-gradient(to bottom, #f610fe, #43b5e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.stepCard h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.stepCard p {
+  color: #a8a8b3;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.stepConnector {
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepConnectorLine {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #dc1bd9, #4eb4c3);
+  opacity: 0.4;
+}
+
+/* ===== Responsive ===== */
+@media only screen and (max-width: 1100px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .heroDescription {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroBtnRow {
+    justify-content: center;
+  }
+
+  .heroVisual {
+    flex: none;
+    width: 100%;
+    max-width: 380px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .heroCard1 {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .heroCard2 {
+    right: auto;
+    left: 30%;
+    transform: translateX(-50%);
+  }
+  .heroCard3 {
+    right: auto;
+    left: 55%;
+    transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .quickStatsSection {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .quickStatDivider {
+    display: none;
+  }
+
+  .quickStatItem {
+    flex: 1 1 40%;
+    min-width: 140px;
+  }
+
+  .stepsRow {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stepConnector {
+    width: 2px;
+    height: 30px;
+  }
+
+  .stepConnectorLine {
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #dc1bd9, #4eb4c3);
+  }
+
+  .stepCardWrap {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .heroDescription {
+    font-size: 14px;
+  }
+
+  .heroBtnRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .heroBtnPrimary,
+  .heroBtnSecondary {
+    width: 100%;
+    padding: 14px 24px;
+  }
+
+  .heroVisual {
+    height: 260px;
+  }
+
+  .heroFloatingCard {
+    min-width: 180px;
+    padding: 12px 16px;
+  }
+
+  .heroFloatingCard img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .heroCardValue {
+    font-size: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 22px;
+  }
+
+  .stepCard {
+    padding: 24px 20px;
+  }
+
+  .stepNumber {
+    font-size: 32px;
+  }
+}
