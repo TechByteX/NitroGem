@@ -1,0 +1,161 @@
+/* ===== Level Up Page ===== */
+.levelPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  padding-bottom: 60px;
+}
+
+.levelHeader {
+  text-align: center;
+}
+
+.levelBadge {
+  display: inline-block;
+  background: rgba(67, 181, 230, 0.1);
+  border: 1px solid rgba(67, 181, 230, 0.2);
+  color: #43b5e6;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.levelHeader h1 {
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+
+.levelHeader p {
+  color: #94a3b8;
+  font-size: 16px;
+  margin: 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.levelGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.levelCardOuter {
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(246, 16, 254, 0.15), rgba(67, 181, 230, 0.15));
+  transition: all 0.3s ease;
+}
+
+.levelCardOuter:hover {
+  background: linear-gradient(135deg, rgba(246, 16, 254, 0.4), rgba(67, 181, 230, 0.4));
+  transform: translateY(-4px);
+}
+
+.levelCard {
+  background: #111a2e;
+  border-radius: 20px;
+  padding: 32px 24px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.levelCardNum {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #f610fe, #43b5e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.levelCard h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.levelCard p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA */
+.levelCta {
+  width: 100%;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(135deg, #f610fe, #43b5e6);
+}
+
+.levelCtaInner {
+  background: #111a2e;
+  border-radius: 24px;
+  padding: 48px 32px;
+  text-align: center;
+}
+
+.levelCtaInner h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+
+.levelCtaInner p {
+  color: #94a3b8;
+  font-size: 15px;
+  margin: 0 0 28px 0;
+}
+
+.levelCtaBtn {
+  padding: 14px 36px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f610fe, #43b5e6);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.levelCtaBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .levelGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .levelGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .levelHeader h1 {
+    font-size: 26px;
+  }
+
+  .levelCtaInner {
+    padding: 32px 20px;
+  }
+}
