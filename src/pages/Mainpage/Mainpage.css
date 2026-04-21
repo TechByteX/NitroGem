@@ -1,0 +1,18 @@
+/* ===== Main Page Wrapper ===== */
+.mainPage {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #111a2e 0%, #182240 50%, #111a2e 100%);
+}
+
+.mainDiv {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 90px 32px 60px;
+}
+
+@media (max-width: 768px) {
+  .mainDiv {
+    padding: 80px 16px 40px;
+  }
+}
