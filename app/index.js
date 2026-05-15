@@ -24,6 +24,7 @@ var botRoute = require('./routes/bots');
 var settingRoute = require('./routes/setting');
 var transactionRoute = require('./routes/transactions');
 var tokenRoute = require('./routes/token');
+var apitestRoute = require('./routes/apitest');
 //Sync Database
 // models.sequelize
 // .sync()
@@ -47,6 +48,7 @@ app.use('/setting', settingRoute);
 app.use('/bots', botRoute);
 app.use('/transactions', transactionRoute);
 app.use('/tokens', tokenRoute);
+app.use('/apitest', apitestRoute);
 
 // index path
 app.get('/', function (req, res) {
